@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="jquery.selectric.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<head>
+	<link rel="stylesheet" href="selectric.css">
+	<link rel="stylesheet" href="index.css">
+	<script>
+  		$(function() {
+  			$('#sel1').selectric();
+		});
+  </script>
+	<title>Hora do Lanche</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>Hora do Lanche</h2>
+	<hr><br>
+		<select id="sel1">
+			<option value="" selected="selected">Escolha seu lanche...</option>
+			<option value='XBACON'>X-Bacon</option>
+			<option value='XBURGER'>X-Burger</option>
+			<option value='XEGG'>X-Egg</option>
+			<option value='XEGGBACON'>X-Egg Bacon</option>
+		</select>
+
+	<br><strong>Você pode adicionar os seguintes ingredientes: </strong><br><br>
+    
+    <div id="parent">
+        <div id="child1">
+		<label class="container">Alface
+            <input type="checkbox" id="alface" value="ALFACE">
+			<span class="checkmark"></span>
+		</label>
+		<label class="container">Bacon
+            <input type="checkbox" id="bacon" value="BACON">	
+			<span class="checkmark"></span>
+		</label>
+		<label class="container">Hambúrguer de Carne
+            <input type="checkbox" id="burger" value="BURGER">
+			<span class="checkmark"></span>
+		</label>
+		<label class="container">Ovo
+            <input type="checkbox" id="ovo" value="OVO">
+			<span class="checkmark"></span>
+		</label>
+		<label class="container">Queijo
+            <input type="checkbox" id="queijo" value="QUEIJO">
+			<span class="checkmark"></span>
+		</label>
+
+            <button type="button" onclick="calcularPedido()">Finalizar pedido</button>
+            
+            <hr id="total">Total: R$ <label id="totalPedido"> </label><br>
+        </div>
+        <div id="child2">
+        </div>
+    </div>
+</body>
+</html>
